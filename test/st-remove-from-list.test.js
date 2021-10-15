@@ -1,6 +1,6 @@
-const { assert } = require('chai');
-const { testOptional, ListNode } = require('../extensions/index.js');
-const removeKFromList = require('../src/st-remove-from-list.js');
+const { assert } = require("chai");
+const { testOptional, ListNode } = require("../extensions/index.js");
+const removeKFromList = require("../src/st-remove-from-list.js");
 
 it.optional = testOptional;
 
@@ -18,8 +18,8 @@ function convertArrayToList(arr) {
   }, null);
 }
 
-describe('st-remove-from-list', () => {
-  it.optional('should return the list without values equal to k', () => {
+describe("st-remove-from-list", () => {
+  it.optional("should return the list without values equal to k", () => {
     const initial = convertArrayToList([3, 1, 2, 3, 4, 5]);
     const expected = convertArrayToList([1, 2, 4, 5]);
     assert.deepEqual(removeKFromList(initial, 3), expected);
